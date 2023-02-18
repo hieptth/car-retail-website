@@ -26,6 +26,14 @@ body {
     background-color: #576ca8;
 }
 
+.dropdown-menu {
+    background-color: #576ca8;
+}
+
+.dropdown-item:hover {
+    background-color: #274690;
+}
+
 header {
     background-color: #274690;
     border-color: #274690;
@@ -35,20 +43,23 @@ header {
 section {
     display: -webkit-flex;
     display: flex;
+    flex-direction: row;
 }
 
 side {
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    padding: 2px;
+    padding: 5px;
+    max-width: 200px;
+    background-color: #f5f3f5;
 }
 
 content {
-    -webkit-flex: 5;
-    -ms-flex: 5;
-    flex: 5;
+    padding: 2px;
+}
+
+footer {
+    background-color: #1b264f;
     padding: 10px;
+    text-align: center;
 }
 
 @media (max-width: 600px) {
