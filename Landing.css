@@ -1,0 +1,59 @@
+/*
+darkblue:   1b264f
+blue:       274690
+light-blue: 576ca8
+black:      302b27
+white:      f5f3f5
+*/
+
+body {
+    background-color: #576ca8;
+}
+
+.text {
+    color: #f5f3f5;
+    text-shadow: 3px 3px 5px #302b27;
+    font-size: 110%;
+    font-weight: 600;
+}
+
+.navbar-toggler {
+    background-color: #274690;
+    border: none;
+}
+
+.navbar-toggler:hover {
+    background-color: #576ca8;
+}
+
+header {
+    background-color: #274690;
+    border-color: #274690;
+    border-style: hidden hidden inset hidden;
+}
+
+section {
+    display: -webkit-flex;
+    display: flex;
+}
+
+side {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding: 2px;
+}
+
+content {
+    -webkit-flex: 5;
+    -ms-flex: 5;
+    flex: 5;
+    padding: 10px;
+}
+
+@media (max-width: 600px) {
+    section {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+}
