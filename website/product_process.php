@@ -40,7 +40,7 @@
                 CREATE TABLE IF NOT EXISTS USERS (
                 Id INT(6) UNSIGNED AUTO_INCREMENT,
                 Username VARCHAR(30) NOT NULL,
-                Password VARCHAR(25) NOT NULL,
+                Password VARCHAR(255) NOT NULL,
                 Email VARCHAR(30) NOT NULL,
                 Membership VARCHAR(1) NOT NULL,
                 PRIMARY KEY (Id)

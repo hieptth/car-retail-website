@@ -7,7 +7,6 @@
         <meta name='viewport' content='width=device-width, initial-scale=1'>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
         <link rel='stylesheet' type='text/css' media='screen' href='css\login.css'>
-        <script type="text/javascript" src="js/loginValidate.js"></script>
     </head>
 
     <body>
@@ -32,24 +31,50 @@
                         <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
                         <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
 
+
+                        <?php
+                            $username = $password = $email = "";
+
+                            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                            $name = test_input($_POST["username"]);
+                            $email = test_input($_POST["password"]);
+                            $website = test_input($_POST["email"]);
+                            }
+
+                            function test_input($data) {
+                                $data = trim($data);
+                                $data = stripslashes($data);
+                                $data = htmlspecialchars($data);
+                                return $data;
+                            }
+                        ?>
+
+
                         <div class="card bg-glass">
                             <div class="card-body px-4 py-5 px-md-5">
-                                <form name="loginForm" onsubmit="return validateForm()" method="post" autocomplete="on">
+                                <form name="loginForm" onsubmit="return validateForm()" method="post" autocomplete="on"
+                                    action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"] . '?page=home'); ?>">
+
                                     <!-- Username input -->
                                     <div class="form-outline mb-4">
-                                        <input type="text" id="username" class="form-control" name="username" 
-                                        minlength="3" maxlength="25" placeholder="Username" required/>
+                                        <input type="text" id="username" class="form-control" name="username"
+                                            minlength="3" maxlength="25" placeholder="Username" required />
                                     </div>
 
                                     <!-- Password input -->
                                     <div class="form-outline mb-4">
-                                        <input type="password" id="password" class="form-control" name="password" 
-                                        minlength="8" maxlength="15" placeholder="Password" required/>
+                                        <input type="password" id="password" class="form-control" name="password"
+                                            minlength="8" maxlength="25" placeholder="Password" required />
+                                        <em style="font-size: 90%">
+                                            Contain at least 8 characters with one uppercase, one lowercase, a number
+                                            and a special character.
+                                        </em>
                                     </div>
 
                                     <!-- Email input -->
                                     <div class="form-outline mb-4">
-                                        <input type="email" id="email" class="form-control" name="email" placeholder="Email"/>
+                                        <input type="email" id="email" class="form-control" name="email"
+                                            placeholder="Email" />
                                     </div>
 
                                     <!-- Submit button -->
@@ -83,6 +108,26 @@
                 </div>
             </div>
         </section>
+
+        <script>
+            function validateForm() {
+                let x = document.getElementById("username").value;
+                let y = document.getElementById("password").value;
+
+                const u_pattern = /^[a-zA-Z0-9_]+$/;
+                const y_pattern = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
+
+                var u_check, p_check;
+                u_check = p_check = false;
+
+                if (u_pattern.test(x)) u_check = true;
+                else alert("Invalid username!");
+                if (y_pattern.test(y)) p_check = true;
+                else alert("Invalid password!");
+
+                return (u_check && p_check);
+            }
+        </script>
 
     </body>
 </html>
