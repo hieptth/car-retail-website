@@ -56,7 +56,7 @@ h1,
     height: auto;
     min-height: 35rem;
     padding: 15rem 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../img/car-bg.jpg") no-repeat;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url(/assets/img/car-bg.jpg) no-repeat;
     background-position: center;
     background-attachment: scroll;
     background-size: cover;
@@ -98,16 +98,16 @@ h1,
 
 .navbar-toggler,
 .dropdown-menu {
-    background-color: #524F58;
+    background-color: black;
     border: none;
 }
 
 .navbar-toggler:hover {
-    background-color: #7B7780;
+    background-color: #2D2A32;
 }
 
 .dropdown-item:hover {
-    background-color: #D3CFD9;
+    background-color: whitesmoke;
 }
 
 section {

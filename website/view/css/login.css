@@ -43,3 +43,15 @@ form:invalid button {
     opacity: 0.3;
     pointer-events: none;
 }
+
+.login-label {
+    color: #31285a;
+    font-size: 100%;
+    font-weight: 600;
+    padding-left: 3px;
+}
+
+#message {
+    display: none;
+    padding-top: 5px;
+}
