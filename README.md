@@ -1,2 +1,2 @@
-# web-programming-course
-The website for grading in my university's web programming course.
+# CAR DEALER website
+Created for educational purpose using basic HTML, CSS, Javascript and PHP with a little bit of Bootstrap 5.
