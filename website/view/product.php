@@ -21,8 +21,7 @@
                 <div class="card-body">
                     <form class="form-inline" action="" method="POST">
                         <div class="input-group">
-                            <input type="text" class="form-control form-control-lg w-75 rounded-0" name="search_box"
-                            onkeyup="load_data(this.value)" placeholder="Type here ...">
+                            <input type="text" class="form-control form-control-lg w-75 rounded-0" name="search_box" onkeyup="load_data(this.value)" placeholder="Type here ...">
                             <button type="submit" id="btn_search" class="btn btn-primary w-25 rounded-0">Search</button>
                             <span id="search_result" class="w-75"></span>
                         </div>
