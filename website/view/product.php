@@ -7,7 +7,7 @@
                 </div>
                 <div class="card-body">
                     <div id="deals">
-                        <button type="button" onclick="loadDeal()">Click here</button>
+                        <button type="button" class="btn btn-primary" onclick="loadDeal()">Click here</button>
                     </div>
                 </div>
             </div>
@@ -21,10 +21,10 @@
                 <div class="card-body">
                     <form class="form-inline" action="" method="POST">
                         <div class="input-group">
-                            <input type="text" class="form-control form-control-lg w-75" name="search_box"
+                            <input type="text" class="form-control form-control-lg w-75 rounded-0" name="search_box"
                             onkeyup="load_data(this.value)" placeholder="Type here ...">
-                            <span id="search_result"></span>
-                            <button type="submit" id="btn_search" class="btn btn-primary w-25">Search</button>
+                            <button type="submit" id="btn_search" class="btn btn-primary w-25 rounded-0">Search</button>
+                            <span id="search_result" class="w-75"></span>
                         </div>
                     </form>
                 </div>

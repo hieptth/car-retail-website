@@ -1,11 +1,12 @@
 <?php
 
     if (isset($_POST["query"])) {
-        require_once __DIR__ . 'db_connect.php';
+        require_once __DIR__ . '\db_connect.php';
 
         $data = <<<XML
         <?xml version='1.0' encoding='UTF-8'?>
-        <body></body>
+        <list>
+        </list>
         XML;
         
         $xml = new SimpleXMLElement($data);
@@ -22,11 +23,9 @@
         $tmp = array();
 
         foreach ($result as $row) {
-            $tmp[] = array('id', 'Product_name' => str_ireplace($condition,$replace_str,$row["Product_name"]));
-        }
-
-        foreach ($tmp as $key => $value) {
-            $xml->addChild($key,$value);
+            $add = $xml->addChild('Product', $row['Product_name']);
+            $add->addAttribute('id',$row['id']);
+            // $tmp[] = array('id', 'Product_name' => str_ireplace($condition,$replace_str,$row["Product_name"]));
         }
 
         echo $xml->asXML();

@@ -1,5 +1,9 @@
 function load_data(query) {
+
+    document.getElementById('search_result').innerHTML = query;
+
     if (query.length > 0) {
+
         var form_data = new FormData();
 
         form_data.append('query', query);
@@ -14,28 +18,28 @@ function load_data(query) {
 
             if (ajax_req.readyState == 4 && ajax_req.status == 200) {
 
-                //var response = JSON.parse(ajax_req.responseText); // problem here
-                var response = ajax_req.responseXML;
+                var response = ajax_req.responseText;
+
+                parser = new DOMParser();
+
+                xmlDoc = parser.parseFromString(response, "text/xml");
 
                 var html = '<div class="list-group">';
 
-                if (response.length > 2) {
+                if (xmlDoc.getElementsByTagName("Product").length !== 0) {
 
-                    var hint = xml.getElementsByTagName("id");
+                    var hint = xmlDoc.getElementsByTagName("Product");
 
-                    for (var i = 0; i < id.length; i++) {
-                        var suggestion = id[i].Product_name;
-                        html += '<a href="#" class="list-group-item list-group-item-action"'
-                            + suggestion + '</a>';
+                    for (var i = 0; i < hint.length; i++) {
+                        if (i.length !== 0) {
+                            var suggestion = hint[i].childNodes[0].nodeValue;
+                            html += '<a href="#" class="list-group-item list-group-item-action rounded-0">'
+                                + suggestion + '</a>';
+                        }
                     }
-
-                    // for (var i = 0; i < response.length; i++) {
-                    //     html += '<a href="#" class="list-group-item list-group-item-action"'
-                    //         + response[i].Product_name + '</a>';
-                    // }
                 }
                 else {
-                    html += '<a href="#" class="list-group-item list-group-item-action disabled">No Data Found</a>';
+                    html += '<a href="#" class="list-group-item list-group-item-action rounded-0 disabled">No Data Found</a>';
                 }
 
                 html += '</div>';
