@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' type='text/css' media='screen' href='\view\css\product.css'>
-</head>
-<body>
     <div class="container px-20 py-20 background-radial-gradient overflow-hidden">
         <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
             <?php
@@ -46,6 +37,3 @@
             ?>
         </div>
     </div>
-    
-</body>
-</html>

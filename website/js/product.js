@@ -11,6 +11,7 @@ function load_data(query) {
         ajax_req.send(form_data);
 
         ajax_req.onreadystatechange = function () {
+
             if (ajax_req.readyState == 4 && ajax_req.status == 200) {
 
                 //var response = JSON.parse(ajax_req.responseText); // problem here

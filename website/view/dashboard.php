@@ -7,26 +7,23 @@
         require_once __DIR__ . '/class/Member.php';
         $member = new Member();
         $memberResult = $member->getMemberById($_SESSION["userId"]);
-        if(!empty($memberResult[0]["DisplayName"])) {
-            $displayName = ucwords($memberResult[0]["DisplayName"]);
+        if(!empty($memberResult[0]["Display_name"])) {
+            $displayName = ucwords($memberResult[0]["Display_name"]);
         } else {
             $displayName = $memberResult[0]["Username"];
         }
     }
 ?>
 
-<html>
-    <head>
-    </head>
-
-    <body>
-        <div>
-            <div class="dashboard">
-                <div class="member-dashboard">Welcome <b><?php echo $displayName; ?></b>, You have successfully logged in!<br>
-                    Click to <a href="./logout.php" class="logout-button">Logout</a>
+<div>
+    <div class="dashboard">
+        <div class="card m-auto" style="width: min(800px, 100%);">
+                <div class="card-header">
+                    <h4>Welcome, <?php echo $_SESSION["Display_name"]; ?>!</h4>
+                </div>
+                <div class="card-body">
+                    Your information is here.
                 </div>
             </div>
-        </div>
-    </body>
-    
-</html>
+    </div>
+</div>
