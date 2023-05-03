@@ -11,12 +11,12 @@
         $isLoggedIn = $member->processLogin($username, $password);
         if (!$isLoggedIn) {
             $_SESSION["errorMessage"] = "Invalid Credentials";
-            require_once __DIR__ . '\view\login.php';
+            include __DIR__ . '\view\login.php';
         }
         
         if (isset($_SESSION["userId"])) {
             header('Refresh: 0');
         }
-        require_once __DIR__ . '\verify.php';
+        include __DIR__ . '\verify.php';
     }
 ?>

@@ -1,4 +1,22 @@
-<?php if (!isset($_SESSION["userId"])) { ?>
+<?php 
+
+    $username = $password = $email = "";
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $username = test_input($_POST["username"]);
+        $email = test_input($_POST["password"]);
+        $website = test_input($_POST["email"]);
+    }
+
+    function test_input($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
+    if (!isset($_SESSION["userId"])) { 
+?>
 <section class="container px-10 background-radial-gradient overflow-hidden">
 
     <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
@@ -27,31 +45,12 @@
                 <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
 
 
-                <?php
-                    $username = $password = $email = "";
-
-                    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                        $username = test_input($_POST["username"]);
-                        $email = test_input($_POST["password"]);
-                        $website = test_input($_POST["email"]);
-                    }
-
-                    function test_input($data) {
-                        $data = trim($data);
-                        $data = stripslashes($data);
-                        $data = htmlspecialchars($data);
-                        return $data;
-                    }
-                ?>
-
-
-
                 <div class="card bg-glass">
                     <div class="card-body px-4 py-5 px-md-5">
                         <form name="loginForm" onsubmit="return validateForm()" method="post" action="" autocomplete="on">
 
                             <?php if(isset($_SESSION["errorMessage"])) { ?>
-                            <div class="error-message" style="color: red;"><i>*<?php  echo $_SESSION["errorMessage"]; ?></i></div>
+                            <div class="error-message py-1" style="color: red;"><i>*<?php  echo $_SESSION["errorMessage"]; ?></i></div>
                             <?php unset($_SESSION["errorMessage"]); } ?>
 
                             <!-- Username input -->
@@ -147,9 +146,9 @@
         u_check = p_check = false;
 
         if (u_pattern.test(x)) u_check = true;
-        else alert("Invalid username!");
+        else alert("Invalid username format!");
         if (y_pattern.test(y)) p_check = true;
-        else alert("Invalid password!");
+        else alert("Invalid password format!");
 
         return (u_check && p_check);
     }

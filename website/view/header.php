@@ -49,7 +49,7 @@
                         <?php if (isset($_SESSION["userId"])) { ?>
                             <li class="nav-item">
                                 <a class="nav-link text" aria-current="page"
-                                    href="http://localhost/index.php?page=dashboard">My User</a>
+                                    href="http://localhost/index.php?page=dashboard">Welcome, <?php echo $_SESSION["Display_name"] ?></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text" aria-current="page"
