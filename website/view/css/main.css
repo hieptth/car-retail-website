@@ -7,6 +7,8 @@ Light-gray: #A5A2AC
 White-smoke: #D3CFD9
 */
 
+/* Main HTML */
+
 * {
     padding: 0;
     margin: 0;
@@ -59,6 +61,7 @@ h1,
     }
 }
 
+
 .masthead {
     position: relative;
     width: 100%;
@@ -95,6 +98,22 @@ h1,
     font-size: 1.5rem;
 }
 
+content {
+    padding: 2px;
+    flex: 1;
+}
+
+#masterbody {
+    flex: 1 0 auto;
+    padding-top: 4.5rem;
+}
+
+.footer {
+    flex-shrink: 0;
+    margin-top: 0;
+    background-color: #2d2a32;
+}
+
 .text {
     color: #DDBF5F;
     text-shadow: 3px 3px 5px #2d2a32;
@@ -102,6 +121,8 @@ h1,
     font-weight: 600;
 }
 
+
+/* Navbar */
 .navbar {
     transition: all 0.5s;
     background: black;
@@ -129,21 +150,6 @@ h1,
     border: none;
 }
 
-content {
-    padding: 2px;
-    flex: 1;
-}
-
-#masterbody {
-    flex: 1 0 auto;
-    padding-top: 4.5rem;
-}
-
-.footer {
-    flex-shrink: 0;
-    margin-top: 0;
-    background-color: #2d2a32;
-}
 
 /* Login page */
 
@@ -212,4 +218,60 @@ form:invalid button {
 #message {
     display: none;
     padding-top: 5px;
+}
+
+/* Product page */
+
+#btn_search {
+    background-color: goldenrod;
+    color: whitesmoke;
+    font-size: 120%;
+}
+
+.item {
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+.item img {
+    transition: 0.3s all;
+}
+
+.item:hover img {
+    transform: scale(1.1);
+}
+
+hr {
+    border: solid 1.5px goldenrod;
+}
+
+.star i {
+    color: goldenrod;
+    padding: 10px 0;
+}
+
+.p-name {
+    font-size: 90%;
+    font-weight: 400;
+}
+
+.p-price {
+    font-size: 110%;
+    font-weight: 600;
+}
+
+.item .buy-btn {
+    background-color: #FB774B;
+    transform: translateY(20px);
+    transition: 0.3s all;
+    opacity: 0;
+    border: none;
+    width: min(100px, 100%);
+    height: min(40px, 100%);
+    color: whitesmoke;
+}
+
+.item:hover .buy-btn {
+    transform: translateY(0);
+    opacity: 1;
 }

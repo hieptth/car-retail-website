@@ -20,8 +20,6 @@ if (isset($_POST["query"])) {
 
     $replace_str = '<b>' . $condition . '</b>';
 
-    $tmp = array();
-
     foreach ($result as $row) {
         $add = $xml->addChild('Product', str_replace($condition, $replace_str, $row['Product_name']));
         $add->addAttribute('id', $row['id']);
