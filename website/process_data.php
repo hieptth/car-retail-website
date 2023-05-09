@@ -23,12 +23,9 @@ if (isset($_POST["query"])) {
     $tmp = array();
 
     foreach ($result as $row) {
-        $add = $xml->addChild('Product', $row['Product_name']);
+        $add = $xml->addChild('Product', str_replace($condition, $replace_str, $row['Product_name']));
         $add->addAttribute('id', $row['id']);
-        // $tmp[] = array('id', 'Product_name' => str_ireplace($condition,$replace_str,$row["Product_name"]));
     }
 
     echo $xml->asXML();
-
-    // echo json_encode($data);
 }

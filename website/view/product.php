@@ -1,6 +1,9 @@
 <div class="container-fluid py-2">
-    <div class="row">
-        <div class="col-lg-2 m-auto ps-4">
+    <div class="d-flex-row col-lg-10 m-auto">
+        <h1>Search</h1>
+    </div>
+    <div class="d-flex-row">
+        <!-- <div class="col-lg-2 m-auto ps-2">
             <div class="card" style="width: min(200px, 100%);">
                 <div class="card-header">
                     <h3>Hot Deals</h3>
@@ -11,23 +14,16 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <div class="col-lg-10 m-auto pe-5">
-            <div class="card">
-                <div class="card-header">
-                    <h3>Search Box</h3>
+        <div class="col-lg-10 m-auto">
+            <form class="form-inline" action="" method="POST">
+                <div class="input-group">
+                    <input type="text" class="form-control form-control-lg w-75 rounded-0" name="search_box" onkeyup="load_data(this.value)" placeholder="Type here ...">
+                    <button type="submit" id="btn_search" class="btn btn-secondary w-25 rounded-0">Search</button>
+                    <span id="search_result" class="w-75"></span>
                 </div>
-                <div class="card-body">
-                    <form class="form-inline" action="" method="POST">
-                        <div class="input-group">
-                            <input type="text" class="form-control form-control-lg w-75 rounded-0" name="search_box" onkeyup="load_data(this.value)" placeholder="Type here ...">
-                            <button type="submit" id="btn_search" class="btn btn-primary w-25 rounded-0">Search</button>
-                            <span id="search_result" class="w-75"></span>
-                        </div>
-                    </form>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
 </div>

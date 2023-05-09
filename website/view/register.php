@@ -1,4 +1,4 @@
-<div class="col-lg-8 m-auto">
+<div class="col-lg-8 m-auto pt-5">
     <div class="card m-auto">
         <div class="card-header">
             <h2>This page is not yet developed.</h2>
