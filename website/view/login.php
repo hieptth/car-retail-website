@@ -30,7 +30,7 @@ if (!isset($_SESSION["userId"])) {
                 <!-- Username input -->
                 <div class="form-outline input-group mb-4">
                     <!-- <label for="username"><span class="login-label">Username</span></label> -->
-                    <span class="input-group-text"><i class="ri-user-fill"></i></span><input type="text" id="username" class="form-control" name="username" minlength="3" maxlength="25" placeholder="Username" required />
+                    <span class="input-group-text"><i class="ri-user-fill"></i></span><input type="text" id="username" class="form-control" name="username" minlength="3" maxlength="25" title="Contain at least 3 characters with one uppercase, one lowercase, and a number." placeholder=" Username" required />
                 </div>
 
                 <!-- Password input -->
@@ -56,7 +56,7 @@ if (!isset($_SESSION["userId"])) {
 
                 <!-- Submit button -->
                 <div class="d-flex justify-content-center mb-4">
-                    <button type="submit" name="login" value="login_processing" class="btn btn-primary bt-lg btn-block ">SIGN IN</button>
+                    <button type="submit" name="login" value="login_processing" class="btn btn-primary bt-lg btn-block" valid>SIGN IN</button>
                 </div>
 
                 <!-- Register buttons -->
