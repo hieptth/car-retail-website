@@ -1,5 +1,6 @@
 <?php
 session_start();
+header("Set-Cookie: cross-site-cookie=whatever; SameSite=None; Secure");
 require('view\header.php');
 
 $view_page_list = array('index', 'home', 'product', 'login', 'register', 'logout', 'dashboard');
