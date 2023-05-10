@@ -32,7 +32,7 @@
             <hr class="mx-auto">
         </div>
     </div>
-    <div class="row mx-auto container pb-5" id="product-showcase"></div>
+    <div class="row mx-auto container pb-4" id="product-showcase"></div>
     <div id="pagination-link"></div>
 </div>
 
