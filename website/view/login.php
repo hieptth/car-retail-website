@@ -5,7 +5,6 @@ $username = $password = $email = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = test_input($_POST["username"]);
     $email = test_input($_POST["password"]);
-    $website = test_input($_POST["email"]);
 }
 
 function test_input($data)
@@ -23,7 +22,7 @@ if (!isset($_SESSION["userId"])) {
             <h1>Login</h1>
             <form name="loginForm" onsubmit="return validateForm()" method="post" action="" autocomplete="on">
                 <?php if (isset($_SESSION["errorMessage"])) { ?>
-                    <div class="error-message py-1" style="color: red;"><i>*<?php echo $_SESSION["errorMessage"]; ?></i></div>
+                    <div class="error-message py-1" style="color: goldenrod;"><i>*<?php echo $_SESSION["errorMessage"]; ?></i></div>
                 <?php unset($_SESSION["errorMessage"]);
                 } ?>
 

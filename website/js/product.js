@@ -13,8 +13,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 function handlePagination(query = '', pageNumber = 1) {
 
-    console.log('Query', query, 'Page', pageNumber);
-
     var form_data = new FormData();
 
     form_data.append("query", query);
@@ -66,9 +64,7 @@ function handlePagination(query = '', pageNumber = 1) {
 
             document.getElementById("product-showcase").innerHTML = html;
 
-            // document.getElementById('pagination-link').innerHTML = xmlDoc.getElementsByTagName('Pagination')[0].childNodes[0].nodeValue;
-
-            console.log('Pagination', xmlDoc.getElementsByTagName('Pagination'));
+            document.getElementById('pagination-link').innerHTML = xmlDoc.getElementsByTagName('Pagination')[0].textContent;
         }
     }
 }

@@ -32,22 +32,8 @@
             <hr class="mx-auto">
         </div>
     </div>
-    <div class="row mx-auto container" id="product-showcase">
-        <div class="item text-center col-lg-3 col-md-4 col-12">
-            <!-- <img class="img-fluid mb-3" style="width: min(300px,80%);" src="/assets/img/sample.png" alt="Sample">
-                <div class="star">
-                    <i class="fa fa-star"></i>
-                    <i class='fa fa-star'></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                </div>
-                <h5 class="p-name">Sample Product</h5>
-                <h4 class="p-price">$1.200.000</h4>
-                <button class="buy-btn">Buy now</button> -->
-        </div>
-        <div id="pagination-link"></div>
-    </div>
+    <div class="row mx-auto container pb-5" id="product-showcase"></div>
+    <div id="pagination-link"></div>
 </div>
 
 
