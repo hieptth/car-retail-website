@@ -115,6 +115,12 @@ content {
     padding: 0;
 }
 
+.coord-btn {
+    font-weight: 600;
+    color: goldenrod;
+    background-color: black;
+}
+
 .footer {
     flex-shrink: 0;
     margin-top: 0;
@@ -193,11 +199,6 @@ section {
     color: whitesmoke;
 }
 
-/* form:invalid button {
-    opacity: 0.3;
-    pointer-events: none;
-} */
-
 .login-label {
     color: #31285a;
     font-size: 100%;
@@ -225,6 +226,24 @@ section {
 #message {
     display: none;
     padding-top: 5px;
+}
+
+/* SignUp page */
+.alr-member {
+    margin: -1rem 0 1rem 0;
+    padding: 0;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.signUp-btn {
+    width: 100%;
+    background-color: goldenrod;
+    font-weight: 600;
+}
+
+.signUp-btn:hover {
+    background-color: gold;
 }
 
 /* Product page */

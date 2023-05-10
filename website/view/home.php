@@ -30,7 +30,7 @@
                 </div>
                 <input type="text" id="longitude" class="form-control rounded-0">
             </div>
-            <button type="button" class="btn btn-secondary" style="color:goldenrod; background-color: black;" onclick="initMap()">Show Map</button>
+            <button type="button" class="coord-btn btn btn-secondary" onclick="initMap()">Show Map</button>
         </div>
         <div class="d-flex flex-row justify-content-end mx-auto">
             <div id="map"></div>

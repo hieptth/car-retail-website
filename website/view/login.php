@@ -1,10 +1,10 @@
 <?php
 
-$username = $password = $email = "";
+$username = $password = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = test_input($_POST["username"]);
-    $email = test_input($_POST["password"]);
+    $password = test_input($_POST["password"]);
 }
 
 function test_input($data)

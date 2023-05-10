@@ -12,8 +12,8 @@ CREATE TABLE IF NOT EXISTS USER (
     Username VARCHAR(30) NOT NULL,
     Display_name VARCHAR(30) NOT NULL,
     Password VARCHAR(255) NOT NULL,
-    Email VARCHAR(30) NOT NULL,
-    Membership VARCHAR(1) NOT NULL,
+    Email VARCHAR(30) DEFAULT 'example@example.com',
+    Membership VARCHAR(1) DEFAULT 'B',
     PRIMARY KEY (userId)
 );
 -- @ Insert products
