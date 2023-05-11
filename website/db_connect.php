@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "noPassword";
+$password = "";
 $db = "onlinestore";
 
 //Create connection

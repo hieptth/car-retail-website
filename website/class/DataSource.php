@@ -6,7 +6,7 @@ class DataSource
 {
     private const HOST = 'localhost';
     private const USERNAME = 'root';
-    private const PASSWORD = 'noPassword';
+    private const PASSWORD = '';
 
     private const DATABASENAME = 'onlinestore';
 
