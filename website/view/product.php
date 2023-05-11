@@ -36,6 +36,19 @@
     <div id="pagination-link"></div>
 </div>
 
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="card" style="margin: 0 30%; max-width: 600px">
+        <!-- <span class="close"><i class="ri-close-circle-fill"></i></span> -->
+        <img src="./assets/img/modal-img.jpg" class="card-img-top" alt="Car Sample" style="max-width: 100%; aspect-ratio: 16/9;">
+        <div class="card-body">
+            <h5 class="card-title" id="modal-name">Car name</h5>
+            <p class="card-text" id="modal-desc">Car description</p>
+            <a href="#" class="btn modal-buy-btn">Buy now</a>
+        </div>
+    </div>
+</div>
+
 
 <script src="/js/product.js"></script>
 

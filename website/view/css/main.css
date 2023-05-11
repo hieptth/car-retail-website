@@ -339,3 +339,84 @@ hr {
     border-radius: 0 5px 5px 0;
     border-right: 2px solid #3D315B;
 }
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding: 10%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.modal .card {
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+.modal-buy-btn {
+    display: inherit;
+    margin: 1rem 30% 0 30%;
+    background-color: #FB774B;
+    border: none;
+    width: min(200px, 100%);
+    height: min(40px, 100%);
+    color: whitesmoke;
+    font-weight: 500;
+}
+
+.modal-buy-btn:hover {
+    background-color: orange;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        bottom: -300px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        bottom: -300px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+/* .close {
+    display: inherit;
+    margin: 0 0 0 93%;
+    height: 100%;
+    width: max(70px, 100%);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: goldenrod;
+    text-decoration: none;
+    cursor: pointer;
+} */

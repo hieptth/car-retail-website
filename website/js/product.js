@@ -50,13 +50,17 @@ function handlePagination(query = '', pageNumber = 1) {
                         var price = hint[i].childNodes[1].childNodes[0].nodeValue;
 
                         html += '<div class="item text-center col-lg-3 col-md-4 col-12">'
-                            + '<img class="img-fluid mb-3" style="width: min(300px,80%);" src="/assets/img/sample.png" alt="Sample">'
+                            + '<img class="img-fluid mb-3" style="width: min(300px,80%);" onClick="handleModal()" src="/assets/img/sample.png" alt="Sample">'
                             + '<div class="star">'
                             + '<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>'
                             + '</div>'
                             + '<h5 class="p-name">' + name + '</h5>'
                             + '<h4 class="p-price">$' + price + '</h4>'
                             + '<button class="buy-btn">Buy now</button></div>';
+
+                        document.getElementById("modal-name").innerHTML = String(name);
+
+                        document.getElementById("modal-desc").innerHTML = '$ ' + String(price);
                     }
                 }
             }
@@ -132,3 +136,23 @@ function handleSearch(query) {
     }
 }
 
+
+
+
+var modal = document.getElementById("myModal");
+
+var span = document.getElementsByClassName("close")[0];
+
+function handleModal() {
+    modal.style.display = "block";
+}
+
+// span.onclick = function () {
+//     modal.style.display = "none";
+// }
+
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
