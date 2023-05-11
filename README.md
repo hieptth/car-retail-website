@@ -16,5 +16,5 @@ This website can run locally on your computer using **XAMPP**.
 ### Login page
 ![Login](./demos/Login.png)
 
-### Product page
+### Register page
 ![Register](./demos/Signup.png)
