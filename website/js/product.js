@@ -143,6 +143,8 @@ var modal = document.getElementById("myModal");
 
 var span = document.getElementsByClassName("close")[0];
 
+var search = document.getElementById("search_result");
+
 function handleModal() {
     modal.style.display = "block";
 }
@@ -154,5 +156,8 @@ function handleModal() {
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
+    }
+    if (event.target != search) {
+        search.innerHTML = "";
     }
 }
