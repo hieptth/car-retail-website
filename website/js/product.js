@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     document.getElementById("sForm").addEventListener("submit", function (event) {
         event.preventDefault() // Cancel the default action
 
+        document.getElementById('search_result').innerHTML = '';
+
         var query = document.getElementsByName('search_box')[0].value;
 
         handlePagination(query);
